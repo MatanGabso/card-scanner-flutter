@@ -45,7 +45,7 @@
                 android:background="@color/semitransparent" />
 
 
-            <LinearLayout
+            <!-- <LinearLayout
                 android:id="@+id/scannerLayout"
                 android:layout_width="0dp"
                 android:layout_height="260dp"
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/ic_anim_rectangle" />
-            </LinearLayout>
+            </LinearLayout> -->
 
             <View
                 android:id="@+id/right"
