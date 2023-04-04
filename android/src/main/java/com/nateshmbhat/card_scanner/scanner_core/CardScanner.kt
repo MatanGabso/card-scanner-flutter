@@ -59,6 +59,7 @@ class CardScanner(private val scannerOptions: CardScannerOptions, private val on
                         ?: return@addOnSuccessListener;
 
                 if (scannerOptions.enableDebugLogs) {
+                  debugLog("Running from custom pluging for KarmaShoppingLtd")
                   debugLog("----------------------------------------------------", scannerOptions)
                   for (block in visionText.textBlocks) {
                     debugLog("visionText: TextBlock ============================", scannerOptions)

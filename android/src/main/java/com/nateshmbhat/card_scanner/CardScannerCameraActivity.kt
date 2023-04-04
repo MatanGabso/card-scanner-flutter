@@ -182,7 +182,7 @@ class CardScannerCameraActivity : AppCompatActivity() {
 
   override fun onDestroy() {
     super.onDestroy()
-    textRecognizer?.close()
+    setResult(Activity.RESULT_CANCELED)
   }
 
   override fun onBackPressed() {
