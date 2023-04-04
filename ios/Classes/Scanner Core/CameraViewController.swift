@@ -178,7 +178,7 @@ class CameraViewController: UIViewController {
                     ),
                     size: CGSize(
                         width: 320,
-                        height: 20
+                        height: 50
                     )
                 )
             )
@@ -186,7 +186,7 @@ class CameraViewController: UIViewController {
             scanYourCardToProceedLabel.textAlignment = NSTextAlignment.center
             scanYourCardToProceedLabel.text = self.prompt
             scanYourCardToProceedLabel.numberOfLines = 2
-            scanYourCardToProceedLabel.font = scanYourCardToProceedLabel.font.withSize(24.0)
+            scanYourCardToProceedLabel.font = scanYourCardToProceedLabel.font.withSize(18.0)
             scanYourCardToProceedLabel.textColor = .white
             self.view.addSubview(scanYourCardToProceedLabel)
         }
