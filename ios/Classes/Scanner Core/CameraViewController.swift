@@ -65,7 +65,7 @@ class CameraViewController: UIViewController {
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        addAnimatingScanLine()
+       // addAnimatingScanLine()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
@@ -287,33 +287,33 @@ class CameraViewController: UIViewController {
         }
     }
     
-    func addAnimatingScanLine() {
+    // func addAnimatingScanLine() {
         
-        guard let image = UIImage(named: "blueScanLine", in: Bundle(for: SwiftCardScannerPlugin.self), compatibleWith: nil) else {
-            return
-        }
+    //     guard let image = UIImage(named: "blueScanLine", in: Bundle(for: SwiftCardScannerPlugin.self), compatibleWith: nil) else {
+    //         return
+    //     }
         
-        let blueScanLineImage = UIImageView(image: image)
+    //     let blueScanLineImage = UIImageView(image: image)
         
-        var center = view.center
+    //     var center = view.center
         
-        for view in view.subviews {
-            if let cornerClips = view as? CornerClipsView {
-                center = cornerClips.center
-            }
-        }
+    //     for view in view.subviews {
+    //         if let cornerClips = view as? CornerClipsView {
+    //             center = cornerClips.center
+    //         }
+    //     }
         
-        blueScanLineImage.frame = CGRect(origin: CGPoint(x: center.x - 160.0, y: center.y - 95.0), size: CGSize(width: 320.0, height: 30.0))
+    //     blueScanLineImage.frame = CGRect(origin: CGPoint(x: center.x - 160.0, y: center.y - 95.0), size: CGSize(width: 320.0, height: 30.0))
         
         
         
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 2.0, delay: 0, options: [.repeat, .autoreverse], animations: {
-                blueScanLineImage.frame = CGRect(origin: CGPoint(x: center.x - 160, y:  center.y + 95.0 - 30.0), size: CGSize(width: 320.0, height: 30.0))
-            }, completion: nil)
-            self.view.addSubview(blueScanLineImage)
-        }
-    }
+    //     DispatchQueue.main.async {
+    //         UIView.animate(withDuration: 2.0, delay: 0, options: [.repeat, .autoreverse], animations: {
+    //             blueScanLineImage.frame = CGRect(origin: CGPoint(x: center.x - 160, y:  center.y + 95.0 - 30.0), size: CGSize(width: 320.0, height: 30.0))
+    //         }, completion: nil)
+    //         self.view.addSubview(blueScanLineImage)
+    //     }
+    // }
     
     public func startScanning() {
         captureSession.startRunning()
