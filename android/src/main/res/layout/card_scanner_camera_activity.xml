@@ -44,6 +44,23 @@
                 android:layout_height="260dp"
                 android:background="@color/semitransparent" />
 
+
+            <LinearLayout
+                android:id="@+id/scannerLayout"
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_scan_border"
+                android:minHeight="800dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/scannerBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_anim_rectangle" />
+            </LinearLayout>
+
             <View
                 android:id="@+id/right"
                 android:layout_width="20dp"

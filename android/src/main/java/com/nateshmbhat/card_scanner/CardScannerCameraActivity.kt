@@ -50,7 +50,7 @@ class CardScannerCameraActivity : AppCompatActivity() {
     cardScannerOptions = intent.getParcelableExtra<CardScannerOptions>(CARD_SCAN_OPTIONS)
 
     scannerLayout = findViewById(R.id.scannerLayout);
-    scannerBar = findViewById(R.id.scannerBar);
+    
     backButton = findViewById(R.id.backButton)
     supportActionBar?.hide();
 
@@ -61,15 +61,7 @@ class CardScannerCameraActivity : AppCompatActivity() {
     vto.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
       override fun onGlobalLayout() {
         scannerLayout.viewTreeObserver.removeOnGlobalLayoutListener(this)
-        animator = ObjectAnimator.ofFloat(scannerBar, "translationY",
-                scannerLayout.y - scannerBar.height,
-                (scannerLayout.y +
-                        scannerLayout.height - scannerBar.height))
-        animator.repeatMode = ValueAnimator.REVERSE
-        animator.repeatCount = ValueAnimator.INFINITE
-        animator.interpolator = AccelerateDecelerateInterpolator()
-        animator.duration = 3000
-        animator.start()
+        
       }
     })
 
