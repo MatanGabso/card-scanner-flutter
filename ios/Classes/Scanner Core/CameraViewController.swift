@@ -34,11 +34,6 @@ class CameraViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         gainCameraPermission()
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.NSApplicationDidChangeScreenParameters, object: nil, queue: nil) { _ in
-            if UIScreen.main.isLocked {
-                dismiss(animated: true, completion: nil)
-            }
-        }
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -75,9 +70,7 @@ class CameraViewController: UIViewController {
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if isBeingDismissed {
-            stopScanning()
-        }
+        stopScanning()
     }
     
     func setupCaptureSession() {
