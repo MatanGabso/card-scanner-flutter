@@ -23,6 +23,8 @@ flutter:
         package: com.nateshmbhat.card_scanner
         pluginClass: CardScannerPlugin
       ios:
+        exlude:
+          - x86_64
         pluginClass: CardScannerPlugin
 
     # To add assets to your plugin package, add an assets section, like this:
